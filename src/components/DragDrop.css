@@ -1,0 +1,45 @@
+.dragContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.outerDragContanier {
+  display: flex;
+  flex-direction: column;
+}
+.dragQuesContainer {
+  border: black 1.5px solid;
+  margin-right: 5px;
+}
+.dragAnsContainer {
+  border: black 1.5px solid;
+}
+
+.dragOptionsContainer {
+  display: flex;
+  margin: 5px auto 0 auto;
+  padding-bottom: 2rem;
+}
+.dragQuesEl {
+  border: black 1.5px solid;
+  padding: 1rem;
+  width: 7rem;
+  height: 2rem;
+}
+.dragAnsEl {
+  border: black 1.5px solid;
+  width: 5rem;
+  min-height: 1rem;
+  font-size: small;
+  padding: 0.5rem;
+}
+.dragAnsElOp {
+  border: black 1.5px solid;
+  padding: 1rem;
+  width: 7rem;
+  height: 2rem;
+}
+
+.draggable {
+  cursor: move;
+}

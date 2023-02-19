@@ -1,24 +1,20 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React from "react";
+import StartTestPage from "./components/StartTestPage";
+import "./App.css";
+import Container from "./components/Container";
+import QuestionsDisplay from "./components/QuestionsDisplay";
+import { useGlobalContext } from "./hooks/useGlobalContext";
+import Results from "./components/Results";
 
 function App() {
+  const { ended, started } = useGlobalContext();
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <header className="header">Quiz Test</header>
+      <Container>
+        {!started ? <StartTestPage /> : !ended && <QuestionsDisplay />}
+        {ended && <Results />}
+      </Container>
     </div>
   );
 }

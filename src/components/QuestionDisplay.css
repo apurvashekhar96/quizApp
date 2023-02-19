@@ -1,0 +1,23 @@
+.questionNo {
+  height: 1.5rem;
+  width: 1.5rem;
+  border-radius: 50%;
+  background-color: grey;
+}
+
+.quesNoElContainer {
+  display: flex;
+  justify-content: space-around;
+}
+
+.active {
+  transform: scale(1.1);
+}
+
+.isAnswered {
+  background-color: greenyellow;
+}
+
+.isUnanswered {
+  background-color: red;
+}
