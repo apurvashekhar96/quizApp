@@ -1,5 +1,6 @@
 import { useState } from "react";
 import { useGlobalContext } from "../hooks/useGlobalContext";
+import "./StartTestPage.css";
 
 const StartTestPage = () => {
   type language = "english" | "kannada" | "other";
@@ -49,10 +50,10 @@ const StartTestPage = () => {
   return (
     <div className="container">
       <p className="container title">
-        Please enter Your details to start test:
+        Please enter Your details to start the test !
       </p>
-      <form onSubmit={handleStart} className="input form">
-        <div className="input name">
+      <form onSubmit={handleStart} className="inputForm">
+        <div className="inputName">
           <label htmlFor="name">Name</label>
           <input
             onChange={handleNameChange}
@@ -61,7 +62,7 @@ const StartTestPage = () => {
             placeholder="Enter Your Name"
           />
         </div>
-        <div className="input email">
+        <div className="inputEmail">
           <label htmlFor="email">Email Id</label>
           <input
             onChange={handleNameChange}
@@ -70,16 +71,18 @@ const StartTestPage = () => {
             placeholder="Enter Your email"
           />
         </div>
-        <div className="input phoneNumber">
+        <div className="inputPhoneNumber">
           <label htmlFor="mobile">Mobile No</label>
           <input
             onChange={handleNameChange}
             id="mobile"
             type="text"
-            placeholder="Enter Yout Mobile"
+            minLength={10}
+            maxLength={11}
+            placeholder="Enter Your Mobile"
           />
         </div>
-        <div className="input phoneNumber">
+        <div className="inputLanguage">
           <label htmlFor="language">Select Language</label>
           <select id="language" onChange={handleNameChange}>
             <option value="English">English</option>

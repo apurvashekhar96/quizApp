@@ -58,10 +58,13 @@ const DragDrop = ({ question, options, callback }: drag) => {
   };
 
   const handleDragStart = (e: React.DragEvent<HTMLDivElement>) => {
-    e.dataTransfer.effectAllowed = "move";
+    //e.stopPropagation();
+    //(event.originalEvent || event)
     dragEl = e.currentTarget.id;
+    e.dataTransfer.effectAllowed = "move";
     if (e.currentTarget.textContent)
       e.dataTransfer.setData("text/html", e.currentTarget.textContent);
+    return false;
   };
 
   let dragQuesEl: JSX.Element[] = [];
@@ -74,6 +77,7 @@ const DragDrop = ({ question, options, callback }: drag) => {
   }
   const handleDragOver = (e: React.DragEvent<HTMLDivElement>) => {
     e.preventDefault();
+    return false;
   };
 
   const dragAnsEl = optionsArray.slice(0, 4).map((opt, index) => {
@@ -98,6 +102,7 @@ const DragDrop = ({ question, options, callback }: drag) => {
         <div className="dragQuesContainer">{dragQuesEl}</div>
         <div className="dragAnsContainer">
           <div
+            data-testid="testEl1"
             id={`${4}`}
             draggable="true"
             onDrop={handleDrop}
@@ -128,6 +133,7 @@ const DragDrop = ({ question, options, callback }: drag) => {
             {optionsArray[6]}
           </div>
           <div
+            data-testid="testEl4"
             id={`${7}`}
             draggable="true"
             onDrop={handleDrop}

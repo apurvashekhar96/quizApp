@@ -78,22 +78,22 @@ const QuestionsDisplay = () => {
           callback={handleAnswering}
           questionNo={index}
         ></QuestionCard>
-        <div>
+        <div className="buttonsContainer">
           <button
             disabled={index < 2}
             onClick={handlePrev}
             className="prevButton"
           >
-            Prev
+            Previous
           </button>
-        </div>
-        <div>
           {index < 5 ? (
             <button onClick={handleNext} className="nextButton">
               Next
             </button>
           ) : (
-            <button onClick={handleSubmit}>Submit Test</button>
+            <button className="nextButton" onClick={handleSubmit}>
+              Submit Test
+            </button>
           )}
         </div>
       </div>

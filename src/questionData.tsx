@@ -10,14 +10,14 @@ const data = [
     questionNo: 2,
     questionType: "True or False",
     question: "useContext hook has a wider scope than useState hook.",
-    options: ["true", "false"],
-    correctAnswer: ["true"],
+    options: ["True", "False"],
+    correctAnswer: ["True"],
   },
   {
     questionNo: 3,
     questionType: "Choose the correct option",
     question: "Which of the following is not a programming language?",
-    options: ["JS", "Babel", "python", "C sharp"],
+    options: ["JS", "Babel", "Python", "C sharp"],
     correctAnswer: ["Babel"],
   },
   {

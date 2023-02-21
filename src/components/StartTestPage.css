@@ -1,0 +1,35 @@
+.container {
+  padding: 1rem;
+  text-align: center;
+}
+
+.inputName > input {
+  margin-left: 1rem;
+  margin-bottom: 0.5rem;
+}
+.inputEmail > input {
+  margin-left: 1rem;
+  margin-bottom: 0.5rem;
+}
+.inputPhoneNumber > input {
+  margin-left: 1rem;
+  margin-bottom: 0.5rem;
+}
+.inputLanguage > select {
+  margin-left: 5rem;
+  margin-bottom: 0.5rem;
+}
+
+.inputForm {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  padding-right: 30%;
+}
+.inputForm > button {
+  margin-right: 25%;
+}
+
+.questionNo {
+  text-align: center;
+}

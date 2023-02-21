@@ -22,7 +22,7 @@ describe("Testing the container component", () => {
     const nextButton = screen.getByRole("button", { name: "Next" });
     userEvent.click(nextButton);
     expect(inputEl).not.toBeInTheDocument();
-    const prevButton = screen.getByRole("button", { name: "Prev" });
+    const prevButton = screen.getByRole("button", { name: "Previous" });
     userEvent.click(prevButton);
     expect(inputEl).not.toBeInTheDocument();
   });
@@ -45,7 +45,7 @@ describe("Testing the container component", () => {
     userEvent.click(nextButton);
     const selectVirtualDomButton = screen.getByLabelText("Virtual DOM");
     userEvent.click(selectVirtualDomButton);
-    const prevButton = screen.getByRole("button", { name: "Prev" });
+    const prevButton = screen.getByRole("button", { name: "Previous" });
     userEvent.click(prevButton);
     expect(selectOptionButton).toBeChecked();
     userEvent.click(nextButton);

@@ -1,7 +1,7 @@
 import { useGlobalContext } from "../hooks/useGlobalContext";
 import data from "../questionData";
 import { PieChart, Pie, Cell, Legend } from "recharts";
-
+import "./Results.css";
 const Results = () => {
   const { markedAnswers } = useGlobalContext();
   let corAns = 0;
@@ -69,9 +69,9 @@ const Results = () => {
   MarksCalculation();
   return (
     <div className="resultsContainer">
-      <div>Results</div>
+      <div className="resultsHeading">Results</div>
       <div>{`Attempted Questions: ${attempted} | Correct Answers: ${corAns}`}</div>
-      <div>{corAns}</div>
+
       <PieChart width={730} height={300}>
         <Pie
           data={pieData}

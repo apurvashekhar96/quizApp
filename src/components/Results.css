@@ -1,0 +1,13 @@
+.resultsContainer {
+  text-align: center;
+  overflow: scroll;
+}
+
+.resultsHeading {
+  font-size: 1.5rem;
+  font-weight: 600;
+}
+
+.recharts-surface {
+  width: 100%;
+}

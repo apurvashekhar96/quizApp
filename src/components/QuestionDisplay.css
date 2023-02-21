@@ -8,6 +8,7 @@
 .quesNoElContainer {
   display: flex;
   justify-content: space-around;
+  margin-top: 0.5rem;
 }
 
 .active {
@@ -20,4 +21,34 @@
 
 .isUnanswered {
   background-color: red;
+}
+
+.fillInTheBlanks {
+  text-align: center;
+}
+.fillInTheBlanks > legend {
+  margin-bottom: 1rem;
+}
+
+.buttonsContainer {
+  display: flex;
+  justify-content: center;
+}
+
+.prevButton {
+  margin: 1rem;
+  padding: 5px;
+  width: 4rem;
+}
+.nextButton {
+  margin: 1rem;
+  width: 4rem;
+}
+
+.singleChoiceQuestions {
+  padding-left: 1rem;
+}
+
+.dragQues {
+  text-align: center;
 }

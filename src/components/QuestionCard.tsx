@@ -70,7 +70,7 @@ const QuestionCard = ({ questionNo, callback }: prop) => {
       );
     });
     displayQuestionEl = (
-      <div>
+      <div className="singleChoiceQuestions">
         <h2>{question.questionType}</h2>
         <legend>{question.question}</legend>
         {radioButtonEl}
@@ -147,7 +147,7 @@ const QuestionCard = ({ questionNo, callback }: prop) => {
 
   if (question?.questionType === "Fill in the blanks") {
     displayQuestionEl = (
-      <div>
+      <div className="fillInTheBlanks">
         <h2>{question.questionType}</h2>
         <legend>{`${question.question}  (${question.options[0]}/${question.options[1]}/${question.options[2]})`}</legend>
         <label>
@@ -157,7 +157,7 @@ const QuestionCard = ({ questionNo, callback }: prop) => {
               value={currentSelectedOpt[0]}
               onChange={handleTypedInputChange}
               className="typeAnswer"
-              placeholder="typeAnswer"
+              placeholder="Type Your Answer"
             ></input>
           }
         </label>
@@ -216,7 +216,7 @@ const QuestionCard = ({ questionNo, callback }: prop) => {
       );
     });
     displayQuestionEl = (
-      <div>
+      <div className="singleChoiceQuestions">
         <h2>{question.questionType}</h2>
         <legend>{question.question}</legend>
         <label>{checkBoxEl}</label>
@@ -227,7 +227,7 @@ const QuestionCard = ({ questionNo, callback }: prop) => {
   //handle question type 5
   if (question?.questionType === "Match the Following") {
     displayQuestionEl = (
-      <div>
+      <div className="dragQues">
         <h2>{question.questionType}</h2>
         <DragDrop
           question={question.question}
